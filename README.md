@@ -10,10 +10,14 @@ Virtual reality controller for playing minecraft
 ## System block diagram
 ![System block diagram](/documents/images/System-Block-Diagram.drawio.png)
 
-## HID module 
+## HID module
+
 ### Functions 
 - Act as a wireless gateway between the modules worn by the user and the computer.
 - Communicate with the computer via USB as an HID device
+
+### 3D render: Exploded view
+![3D render: Exploded view](documents/images/exploded-view-hid-module.png)
 
 ## Stick module
 
@@ -23,6 +27,8 @@ Virtual reality controller for playing minecraft
 - Read IMU data, detect striking movement and send the data to the HID module
 - Calibrate the IMU device when the calibration button is pressed
 
+### 3D render: Exploded view
+![3D render: Exploded view](documents/images/exploded-view-stick-module.png)
 
 ## Pedometer module
 
@@ -31,5 +37,7 @@ Virtual reality controller for playing minecraft
 - Read accelerometer data, detect steps and send the data to the HID module
 - Calibrate the IMU device when the calibration button is pressed
 
+### 3D render: Exploded view
+![3D render: Exploded view](documents/images/exploded-view-pedometer-module.png)
   
 ### Made with lots of ⏱️, 📚 and ☕ by InputBlackBoxOutput
