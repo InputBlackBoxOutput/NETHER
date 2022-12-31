@@ -1,4 +1,4 @@
-(pcb "C:\Users\InputBlackBoxOutput\Desktop\Projects\NETHER\modules\Stick module\board\board.dsn"
+(pcb "C:\Users\InputBlackBoxOutput\Desktop\Projects\NETHER\modules\Pedometer module\board\board.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -35,19 +35,26 @@
             121437 -80081  121715 -80020.4  122000 -80000  163000 -80000
             163285 -80020.4)
     )
-    (keepout "" (polygon F.Cu 0  126250 -105000  120000 -105000  120000 -85000  126250 -85000
-            126250 -105000))
-    (keepout "" (polygon B.Cu 0  126250 -105000  120000 -105000  120000 -85000  126250 -85000
-            126250 -105000))
+    (keepout "" (polygon F.Cu 0  126275 -110000  120000 -110000  120000 -80000  126275 -80000
+            126275 -110000))
+    (keepout "" (polygon B.Cu 0  126275 -110000  120000 -110000  120000 -80000  126275 -80000
+            126275 -110000))
     (via "Via[0-1]_800:400_um")
     (rule
-      (width 250)
+      (width 200)
       (clearance 150.1)
       (clearance 150.1 (type default_smd))
       (clearance 37.5 (type smd_smd))
     )
   )
   (placement
+    (component Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+      (place R5 158200 -95000 front 180 (PN 10k))
+      (place R4 158200 -97000 front 180 (PN 10k))
+      (place R3 151370 -99820 front 0 (PN 1k))
+      (place R2 151300 -103100 front 0 (PN 1k))
+      (place R1 161800 -96000 front 270 (PN 10K))
+    )
     (component "Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y"
       (place U3 150750 -95950 front 90 (PN LSM6DS3))
     )
@@ -60,11 +67,6 @@
     (component "Button_Switch_SMD:SW_SPST_B3U-1000P"
       (place SW1 161750 -101250 front 90 (PN RESET))
     )
-    (component Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
-      (place R3 151370 -99820 front 0 (PN 1k))
-      (place R2 151300 -103100 front 0 (PN 1k))
-      (place R1 161700 -96900 front 0 (PN 10K))
-    )
     (component Board:SolderWire_1x06_P2.54mm
       (place J6 146250 -82500 back 90 (PN Conn_01x06))
       (place J3 145250 -107500 back 90 (PN Conn_01x06))
@@ -74,7 +76,7 @@
       (place J5 151100 -107700 front 90 (PN Conn_01x04))
     )
     (component Board:SolderWire_1x05_P2.54mm
-      (place J4 148700 -82500 front 90 (PN Conn_01x05))
+      (place J4 148550 -82500 front 90 (PN Conn_01x05))
     )
     (component Board:SolderWire_1x02_P2.00mm
       (place J1 162700 -88000 front 0 (PN BATTERY))
@@ -92,10 +94,24 @@
     (component Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder
       (place CS2 157062 -87500 front 0 (PN 22uF))
       (place CS1 157040 -90850 front 0 (PN 10uF))
-      (place C1 156400 -95800 front 90 (PN 100nF))
+      (place C1 154500 -96000 front 90 (PN 100nF))
     )
   )
   (library
+    (image Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+      (outline (path signal 100  -1000 -625  -1000 625))
+      (outline (path signal 100  -1000 625  1000 625))
+      (outline (path signal 100  1000 625  1000 -625))
+      (outline (path signal 100  1000 -625  -1000 -625))
+      (outline (path signal 120  -227.064 735  227.064 735))
+      (outline (path signal 120  -227.064 -735  227.064 -735))
+      (outline (path signal 50  -1850 -950  -1850 950))
+      (outline (path signal 50  -1850 950  1850 950))
+      (outline (path signal 50  1850 950  1850 -950))
+      (outline (path signal 50  1850 -950  -1850 -950))
+      (pin RoundRect[T]Pad_1200x1400_250.95_um 2 1000 0)
+      (pin RoundRect[T]Pad_1200x1400_250.95_um 1 -1000 0)
+    )
     (image "Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y"
       (outline (path signal 120  960 1360  1610 1360))
       (outline (path signal 120  1610 1360  1610 1210))
@@ -273,20 +289,6 @@
             467.617 586.374  675.727 325.413  750 0))
       (pin Rect[T]Pad_900x1700_um 2 1700 0)
       (pin Rect[T]Pad_900x1700_um 1 -1700 0)
-    )
-    (image Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
-      (outline (path signal 100  -1000 -625  -1000 625))
-      (outline (path signal 100  -1000 625  1000 625))
-      (outline (path signal 100  1000 625  1000 -625))
-      (outline (path signal 100  1000 -625  -1000 -625))
-      (outline (path signal 120  -227.064 735  227.064 735))
-      (outline (path signal 120  -227.064 -735  227.064 -735))
-      (outline (path signal 50  -1850 -950  -1850 950))
-      (outline (path signal 50  -1850 950  1850 950))
-      (outline (path signal 50  1850 950  1850 -950))
-      (outline (path signal 50  1850 -950  -1850 -950))
-      (pin RoundRect[T]Pad_1200x1400_250.95_um 2 1000 0)
-      (pin RoundRect[T]Pad_1200x1400_250.95_um 1 -1000 0)
     )
     (image Board:SolderWire_1x06_P2.54mm
       (outline (path signal 100  -1270 1270  635 1270))
@@ -637,7 +639,7 @@
         J3-2 J2-6 J1-2 D2-1 D1-1 CS2-2 CS1-2 C1-2)
     )
     (net +3V3
-      (pins U3-12 U3-8 U3-5 U2-3 U1-2 R2-1 R1-1 J6-1 J3-1 J2-4 CS2-1 C1-1)
+      (pins R5-1 R4-1 U3-12 U3-8 U3-5 U2-3 U1-2 R2-1 R1-1 J6-1 J3-1 J2-4 CS2-1 C1-1)
     )
     (net +3V8
       (pins U2-2 J1-1 CS1-1)
@@ -706,10 +708,10 @@
       (pins U1-16 R3-1)
     )
     (net SCL
-      (pins U3-13 U1-36)
+      (pins R5-2 U3-13 U1-36)
     )
     (net SDA
-      (pins U3-14 U1-33)
+      (pins R4-2 U3-14 U1-33)
     )
     (net INT2
       (pins U3-9 U1-31)
@@ -717,9 +719,9 @@
     (net INT1
       (pins U3-4 U1-30)
     )
-    (class kicad_default "" /1_1 /1_2 /1_3 /1_4 /2_1 /2_2 /2_3 /AUX_1 /AUX_2
-      /AUX_3 /AUX_4 /AUX_5 /AUX_6 /AUX_7 /AUX_8 /LED /RESET /RX /TX GND INT1
-      INT2 "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(J2-Pad1)" "Net-(J2-Pad5)"
+    (class kicad_default "" +3V3 +3V8 /1_1 /1_2 /1_3 /1_4 /2_1 /2_2 /2_3 /AUX_1
+      /AUX_2 /AUX_3 /AUX_4 /AUX_5 /AUX_6 /AUX_7 /AUX_8 /LED /RESET /RX /TX
+      GND INT1 INT2 "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(J2-Pad1)" "Net-(J2-Pad5)"
       "Net-(U1-Pad17)" "Net-(U1-Pad18)" "Net-(U1-Pad19)" "Net-(U1-Pad20)"
       "Net-(U1-Pad21)" "Net-(U1-Pad22)" "Net-(U1-Pad24)" "Net-(U1-Pad25)"
       "Net-(U1-Pad32)" "Net-(U1-Pad4)" "Net-(U1-Pad5)" "Net-(U3-Pad10)" "Net-(U3-Pad11)"
@@ -728,52 +730,31 @@
         (use_via Via[0-1]_800:400_um)
       )
       (rule
-        (width 250)
-        (clearance 150.1)
-      )
-    )
-    (class Power +3V3 +3V8
-      (circuit
-        (use_via Via[0-1]_800:400_um)
-      )
-      (rule
-        (width 350)
+        (width 200)
         (clearance 150.1)
       )
     )
   )
   (wiring
-    (wire (path F.Cu 200  151662 -95450  151662 -95950)(net GND)(type protect))
-    (wire (path F.Cu 200  155712 -95450  156400 -94762.5)(net GND)(type protect))
-    (wire (path F.Cu 200  151662 -95450  155712 -95450)(net GND)(type protect))
-    (wire (path F.Cu 200  156175 -98850  157125 -99800)(net GND)(type protect))
-    (wire (path F.Cu 200  152415 -98850  156175 -98850)(net GND)(type protect))
-    (wire (path F.Cu 200  150000 -97112.5  150712 -97112.5  151000 -97112.5)(net GND)(type protect))
-    (wire (path F.Cu 200  151000 -97434.6  152415 -98850)(net GND)(type protect))
-    (wire (path F.Cu 200  151000 -97112.5  151000 -97434.6)(net GND)(type protect))
-    (wire (path F.Cu 200  151355 -96450  151662 -96450)(net +3V3)(type protect))
-    (wire (path F.Cu 200  150355 -95450  151355 -96450)(net +3V3)(type protect))
-    (wire (path F.Cu 200  149838 -95450  150355 -95450)(net +3V3)(type protect))
-    (wire (path F.Cu 200  148980 -87700  152650 -87700)(net +3V3)(type protect))
-    (wire (path F.Cu 200  148450 -88229.9  148980 -87700)(net +3V3)(type protect))
+    (wire (path F.Cu 200  151662 -95700.5  151662 -95950)(net GND)(type protect))
+    (wire (path F.Cu 200  151662 -95450  151662 -95700)(net GND)(type protect))
+    (wire (path F.Cu 200  150500 -97112.5  151000 -97112.5)(net GND)(type protect))
+    (wire (path F.Cu 200  151662 -95700  151662 -95700.5)(net GND)(type protect))
+    (wire (path F.Cu 200  151662 -95700  151662 -95950)(net GND)(type protect))
+    (wire (path F.Cu 200  151662 -95450  151662 -95450)(net GND)(type protect))
+    (wire (path F.Cu 200  150000 -97112.5  150500 -97112.5)(net GND)(type protect))
+    (wire (path F.Cu 200  148450 -94062.5  148450 -94002.4)(net +3V3)(type protect))
     (wire (path F.Cu 200  149838 -95450  148450 -94062.5)(net +3V3)(type protect))
-    (wire (path F.Cu 200  151650 -93388  150962 -92700)(net +3V3)(type protect))
-    (wire (path F.Cu 200  151650 -94637.5  151650 -93388)(net +3V3)(type protect))
-    (wire (path F.Cu 200  151500 -94787.5  151650 -94637.5)(net +3V3)(type protect))
-    (wire (path F.Cu 200  149350 -92700  148450 -91800)(net +3V3)(type protect))
-    (wire (path F.Cu 200  150962 -92700  149350 -92700)(net +3V3)(type protect))
-    (wire (path F.Cu 200  148450 -91800  148450 -88229.9)(net +3V3)(type protect))
-    (wire (path F.Cu 200  148450 -94062.5  148450 -91800)(net +3V3)(type protect))
-    (wire (path F.Cu 200  156012 -96450  156400 -96837.5)(net +3V3)(type protect))
-    (wire (path F.Cu 200  151662 -96450  156012 -96450)(net +3V3)(type protect))
     (wire (path F.Cu 200  149838 -95950  147850 -95950)(net SCL)(type protect))
-    (wire (path F.Cu 200  147850 -96900  148300 -96450  149838 -96450)(net SDA)(type protect))
-    (wire (path F.Cu 200  151000 -94787.5  151000 -93700)(net INT2)(type protect))
-    (wire (path F.Cu 200  152962 -97112.5  153000 -97150)(net INT1)(type protect))
-    (wire (path F.Cu 200  151500 -97112.5  152962 -97112.5)(net INT1)(type protect))
-    (via "Via[0-1]_800:400_um"  153000 -97150 (net INT1)(type protect))
-    (via "Via[0-1]_800:400_um"  151000 -93700 (net INT2)(type protect))
+    (wire (path F.Cu 200  149838 -95950  149838 -95950)(net SCL)(type protect))
+    (wire (path F.Cu 200  149838 -96450  149838 -96450)(net SDA)(type protect))
+    (wire (path F.Cu 200  148300 -96450  149838 -96450)(net SDA)(type protect))
+    (wire (path F.Cu 200  147850 -96900  148300 -96450)(net SDA)(type protect))
+    (wire (path F.Cu 200  151500 -97112.5  152962 -97112.5  153000 -97150)(net INT1)(type protect))
+    (wire (path F.Cu 200  151662 -96450  151355 -96450  150355 -95450  149838 -95450)(net +3V3)(type protect))
+    (via "Via[0-1]_800:400_um"  148450 -94002.4 (net +3V3)(type protect))
     (via "Via[0-1]_800:400_um"  147850 -95950 (net SCL)(type protect))
     (via "Via[0-1]_800:400_um"  147850 -96900 (net SDA)(type protect))
+    (via "Via[0-1]_800:400_um"  153000 -97150 (net INT1)(type protect))
   )
 )
