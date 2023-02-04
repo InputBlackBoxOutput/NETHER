@@ -157,39 +157,6 @@ Text Label 8725 3300 0    50   ~ 0
 2_1
 Text Label 8725 3400 0    50   ~ 0
 2_2
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 620F9356
-P 2050 3525
-F 0 "H1" H 2150 3571 50  0000 L CNN
-F 1 "MountingHole" H 2150 3480 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 3525 50  0001 C CNN
-F 3 "~" H 2050 3525 50  0001 C CNN
-	1    2050 3525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 620F97B3
-P 2050 4225
-F 0 "H3" H 2150 4271 50  0000 L CNN
-F 1 "MountingHole" H 2150 4180 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 4225 50  0001 C CNN
-F 3 "~" H 2050 4225 50  0001 C CNN
-	1    2050 4225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 620F9E48
-P 2050 3875
-F 0 "H2" H 2150 3921 50  0000 L CNN
-F 1 "MountingHole" H 2150 3830 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 3875 50  0001 C CNN
-F 3 "~" H 2050 3875 50  0001 C CNN
-	1    2050 3875
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2200 2225 2475 2225
 Wire Wire Line
@@ -440,17 +407,6 @@ Wire Notes Line
 	1675 3150 5425 3150
 Wire Notes Line
 	2925 3150 2925 5325
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 620FA214
-P 2050 4550
-F 0 "H4" H 2150 4596 50  0000 L CNN
-F 1 "MountingHole" H 2150 4505 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 4550 50  0001 C CNN
-F 3 "~" H 2050 4550 50  0001 C CNN
-	1    2050 4550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7275 2500 7700 2500
 Wire Wire Line
@@ -776,4 +732,48 @@ Wire Wire Line
 Connection ~ 4550 2575
 Wire Wire Line
 	4550 2575 4200 2575
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 620FA214
+P 2050 4550
+F 0 "H4" H 2150 4596 50  0000 L CNN
+F 1 "MountingHole" H 2150 4505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 4550 50  0001 C CNN
+F 3 "~" H 2050 4550 50  0001 C CNN
+	1    2050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 620F9E48
+P 2050 3875
+F 0 "H2" H 2150 3921 50  0000 L CNN
+F 1 "MountingHole" H 2150 3830 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 3875 50  0001 C CNN
+F 3 "~" H 2050 3875 50  0001 C CNN
+	1    2050 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 620F97B3
+P 2050 4225
+F 0 "H3" H 2150 4271 50  0000 L CNN
+F 1 "MountingHole" H 2150 4180 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 4225 50  0001 C CNN
+F 3 "~" H 2050 4225 50  0001 C CNN
+	1    2050 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 620F9356
+P 2050 3525
+F 0 "H1" H 2150 3571 50  0000 L CNN
+F 1 "MountingHole" H 2150 3480 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 2050 3525 50  0001 C CNN
+F 3 "~" H 2050 3525 50  0001 C CNN
+	1    2050 3525
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

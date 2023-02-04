@@ -1006,4 +1006,6 @@ Wire Wire Line
 	7650 2900 8075 2900
 Text Label 8075 2900 2    50   ~ 0
 LED_P
+Wire Notes Line
+	3300 4825 3300 6000
 $EndSCHEMATC
